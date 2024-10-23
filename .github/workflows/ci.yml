@@ -35,6 +35,7 @@ jobs:
         uses: sonarsource/sonarcloud-github-action@v1.9
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.12-7/x64
         with:
           args: >
             -Dsonar.projectKey=yrasslansi_sonarcloud-python-lab
