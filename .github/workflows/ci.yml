@@ -31,6 +31,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
+            -X
             -Dsonar.projectKey=yrasslansi_sonarcloud-python-lab
             -Dsonar.organization=rasslansi
             -Dsonar.python.version=3.x
