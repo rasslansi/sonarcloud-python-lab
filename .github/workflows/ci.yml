@@ -31,13 +31,6 @@ jobs:
           distribution: 'temurin' # You can use adopt, zulu, etc.
           java-version: '17'
           
-      - name: Install SonarScanner
-        run: |
-          curl -sSLo sonar-scanner.zip https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.8.0.2856-linux.zip
-          unzip sonar-scanner.zip
-          mv sonar-scanner-4.8.0.2856-linux sonar-scanner
-          export PATH=$PATH:$(pwd)/sonar-scanner/bin
-
       - name: SonarCloud Scan
         uses: sonarsource/sonarcloud-github-action@v1.9
         env:
